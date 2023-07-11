@@ -468,7 +468,7 @@ EXTRA_APPS = []
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False
 STORAGES = {
     "staticfiles": {
-        "BACKEND": 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage',
+        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
     },
 }
 CACHES = {

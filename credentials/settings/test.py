@@ -51,7 +51,10 @@ JWT_AUTH.update(
         "JWT_AUDIENCE": SOCIAL_AUTH_EDX_OAUTH2_KEY,
     }
 )
-STATICFILES_STORAGE = None
+STORAGES["staticfiles"] = {
+    "BACKEND": None,
+}
+# STATICFILES_STORAGE = None
 add_plugins(__name__, PROJECT_TYPE, SettingsType.TEST)
 
 # Verifiable Credentials

@@ -21,7 +21,7 @@ attrs==23.1.0
     #   -r requirements/base.txt
     #   edx-ace
     #   openedx-events
-backoff==2.2.1
+backoff==1.10.0
     # via
     #   -r requirements/base.txt
     #   analytics-python

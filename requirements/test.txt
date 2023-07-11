@@ -424,7 +424,7 @@ sailthru-client==2.3.5
     # via
     #   -r requirements/base.txt
     #   edx-ace
-selenium==4.10.0
+selenium==3.141.0
     # via bok-choy
 semantic-version==2.10.0
     # via

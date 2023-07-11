@@ -34,7 +34,10 @@ CACHES = {
 
 # Local Directories
 TEST_ROOT = path("test_root")
-DEFAULT_FILE_STORAGE = "django.core.files.storage.FileSystemStorage"
+STORAGES["default"] = {
+    "BACKEND": "django.core.files.storage.FileSystemStorage",
+}
+# DEFAULT_FILE_STORAGE = "django.core.files.storage.FileSystemStorage"
 MEDIA_ROOT = str(TEST_ROOT / "uploads")
 MEDIA_URL = "/static/uploads/"
 

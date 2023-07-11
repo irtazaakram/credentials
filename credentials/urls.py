@@ -17,10 +17,9 @@ import os
 
 from auth_backends.urls import oauth2_urlpatterns
 from django.conf import settings
-from django.conf.urls import include
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path, re_path
+from django.urls import include, path, re_path
 from django.utils.translation import gettext_lazy as _
 from django.views.defaults import page_not_found
 from drf_yasg import openapi

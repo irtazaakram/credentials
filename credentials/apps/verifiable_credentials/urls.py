@@ -1,8 +1,7 @@
 """
 URLs for verifiable_credentials.
 """
-from django.conf.urls import include
-from django.urls import re_path
+from django.urls import include, re_path
 
 
 urlpatterns = [

@@ -1,5 +1,4 @@
-from django.conf.urls import include
-from django.urls import re_path
+from django.urls import include, re_path
 
 from credentials.apps.records.rest_api.v1 import urls as v1_records_rest_api_urls
 

@@ -32,6 +32,7 @@ jobs:
   unit_tests:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         python-version: ["py38"]
         django-version: ["django32", "django42"]
@@ -62,6 +63,7 @@ jobs:
   code_coverage:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         python-version: ["py38"]
         django-version: ["django32", "django42"]
@@ -88,11 +90,11 @@ jobs:
         run: |
           make static
           make tests
-      - name: Run code coverage
-        uses: codecov/codecov-action@v1
-        with:
-          flags: unittests
-          fail_ci_if_error: true
+      # - name: Run code coverage
+      #   uses: codecov/codecov-action@v1
+      #   with:
+      #     flags: unittests
+      #     fail_ci_if_error: true
 
   docs:
     runs-on: ubuntu-latest

@@ -228,7 +228,6 @@ TIME_ZONE_CLASS = timezone.utc
 
 USE_I18N = True
 
-USE_L10N = True
 
 USE_TZ = True
 
@@ -454,7 +453,11 @@ CSRF_COOKIE_SECURE = False
 FILE_STORAGE_BACKEND = {}
 EXTRA_APPS = []
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False
-STATICFILES_STORAGE = "django.contrib.staticfiles.storage.ManifestStaticFilesStorage"
+STORAGES = {
+    "staticfiles": {
+        "BACKEND": "django.contrib.staticfiles.storage.ManifestStaticFilesStorage",
+    },
+}
 CACHES = {
     "default": {
         "BACKEND": "django.core.cache.backends.locmem.LocMemCache",

@@ -1,8 +1,7 @@
 """
 URLs for the credentials views.
 """
-from django.urls import path
-from django.urls import re_path
+from django.urls import path, re_path
 
 from credentials.apps.credentials import views
 from credentials.apps.credentials.constants import UUID_PATTERN

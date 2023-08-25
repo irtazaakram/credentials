@@ -60,9 +60,7 @@ urlpatterns = oauth2_urlpatterns + [
     path("auto_auth/", core_views.AutoAuth.as_view(), name="auto_auth"),
     path("credentials/", include(("credentials.apps.credentials.urls", "credentials"), namespace="credentials")),
     path("health/", core_views.health, name="health"),
-    path(
-        "management/", include(("credentials.apps.edx_django_extensions.urls", "management"), namespace="management")
-    ),
+    path("management/", include(("credentials.apps.edx_django_extensions.urls", "management"), namespace="management")),
     path("records/", include(("credentials.apps.records.urls", "records"), namespace="records")),
     re_path(r"^program-listing/", ProgramListingView.as_view(), name="program_listing"),
     re_path(r"^favicon\.ico$", FaviconView.as_view(permanent=True)),
